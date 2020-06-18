@@ -1,0 +1,101 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    height: 100vh;
+    background: #F5F5F5;
+    justify-content: center;
+    align-items: center;
+  }
+  .list-items {
+    display: flex;
+  
+    justify-content: center;
+  
+    flex-flow: row wrap;
+    align-content: flex-end;
+  }
+  .list-item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .shopping-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .img-container {
+    box-sizing: border-box;
+    height: 180px;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  img {
+    height: 15em;
+    width: 15em;
+  }
+  
+  .body-container {
+    box-sizing: border-box;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 16px;
+    background: #E0F2F1;
+  }
+  
+  .body-container > .row {
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .body-container .row h2 {
+    font-size: 18px;
+    color: #039be5;
+  }
+  
+  .body-container .row .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #212121;
+  }
+  
+  .body-container .row .price sup {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  
+  .body-container .row button {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    transition: all 1s;
+  }
+  
+  .body-container .row button:hover {
+    transform: scale(1.09);
+  }
+  
+  .body-container .row button:first-child {
+    background: #ff6f00;
+    color: white;
+    border: none;
+  }
+  .item-image {
+    font-size: 6em;
+    color: lightgray;
+  }
+  .body-container .row button:last-child {
+    background: #827717;
+    color: white;
+    border: none;
+  }
+  

@@ -1,0 +1,21 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">
+     
+    </h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <!-- <button class="btn btn-primary" [routerLink]="['/home']"  >Home</button> -->
+      <!-- <button class="btn btn-outline-secondary" [routerLink]="['/home']">logout</button> -->
+      
+      
+      <button class="btn btn-outline-secondary"  [routerLink]="['/home']" 
+           >Home</button>&nbsp;
+      <!-- <a routerLink="/login" class="btn btn-link"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Register</a> -->
+      <!-- <img class="cart" src="/assets/images/shopping-bag.png" [routerLink]="[]" [routerLinkActive]="'active'"
+      [routerLinkActiveOptions]="{exact: true}" alt="cart" /> -->
+      <!-- <span class="badge" *ngIf="cart.length > 0">{{ cart.length }}</span> -->
+      <button class="btn btn-outline-secondary" [routerLink]="['/checkout']"  >CheckOut</button>
+    </nav>
+    
+    <button class="btn btn-outline-secondary" (click)="logOut()">logout</button>
+    
+  </div>

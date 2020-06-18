@@ -1,0 +1,54 @@
+
+ <div class='card'>
+   
+    <div class='card-body'>
+      
+      <div class='list-items'>
+        
+       
+  
+        <div class='col-md-2'>Filter by:</div>
+        <div class='col-md-4'>
+            <input type='text' [(ngModel)]='listFilter' />
+        </div>
+    </div>  
+    
+   
+  
+      <div class='list-item'
+           *ngIf='listFilter'>
+        <div class='col-md-6'>
+          <h4>Filtered by: {{listFilter}}</h4>
+        </div>
+  </div>
+        <div class="list-item" *ngIf='products && products.length'>
+               <div class="row">
+                <div class="col-md-4" *ngFor="let product of filteredProducts">
+              <div class="card mb-4 shadow-sm">
+                <img class="item-image" class="bd-placeholder-img card-img-top p-2"  [src]="product.imageUrl" />
+              
+                <div class="card-body"> 
+                  <p class="card-text">
+                    <strong>{{ product.price| currency:'USD' }}</strong> 
+                    
+                   </p>
+                  <a [routerLink]="['/product/list', product.productId]">
+                    {{ product.productName }}
+                  </a>
+                  <p class="card-text">{{ product.description | slice: 0:60 }}...</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                     
+                      <button type="button" class="btn btn-sm btn-outline-secondary product-btn" [routerLink]="['/product/list', product.productId]">View Details</button>
+                    </div> 
+                   </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf='errorMessage'
+       class='alert alert-danger'>
+    Error: {{ errorMessage }}
+  </div> 
