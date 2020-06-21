@@ -7,7 +7,6 @@ export class CreditCardDirective {
 
   constructor() { }
 
-
   @HostBinding('style.backgroundColor')
   border: string;
 
@@ -21,7 +20,7 @@ export class CreditCardDirective {
       trimmed = trimmed.substr(0, 16);
     }
 
-    let parts = [];
+    const parts = [];
 
     for (let i = 0; i < trimmed.length; i += 4) {
       parts.push(trimmed.substr(i, 4));
