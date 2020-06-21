@@ -10,20 +10,30 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   currentUserSubject = new BehaviorSubject(null);
-  // currentUser = this.currentUserSubject.asObservable();
+  currentUser = this.currentUserSubject.asObservable();
 
   constructor(private http: HttpClient, private router: Router) { }
 
   login(credentials) {
     this.http.post<{ data, msg, result }>(`${environment.apiUrl}user/login`, credentials).subscribe((res) => {
       if (res && res.data) {
+        localStorage.setItem('token', res.data.token);
         this.router.navigate(['/home']);
         this.currentUserSubject.next(res.data);
       }
     })
   }
 
-  getUser() {
-    return this.currentUserSubject;
+  userData() {
+    return this.currentUser;
+  }
+
+  get currentUserValue() {
+    return this.currentUserSubject.value;
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/auth']);
   }
 }

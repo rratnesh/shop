@@ -13,10 +13,14 @@ export class HeaderComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.authService.currentUserSubject.subscribe((user) => {
+    this.authService.userData().subscribe((user) => {
       console.log(this.user);
       this.user = user;
     })
+  }
+
+  logout(){
+    this.authService.logout();
   }
 
 }
