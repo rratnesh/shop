@@ -25,4 +25,8 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.form.value);
     }
   }
+
+  showAlert() {
+    return confirm('Are you sure');
+  }
 }

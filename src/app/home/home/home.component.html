@@ -2,3 +2,29 @@
 Home
 
 <input type="text" appCreditCard>
+
+<div *appUnLess="true">My Text</div>
+
+<!-- 
+<div *ngIf="true">Welcome</div>
+
+<ng-template [ngIf]="false">
+    <div>Welcome Decoded</div>
+</ng-template> -->
+
+
+<!-- swtich(var){
+case: 'A'
+hjshjs
+
+default:
+jkskjs
+} -->
+
+<div [ngSwitch]="type">
+    <div *ngSwitchCase="'A'">A</div>
+    <div *ngSwitchCase="'B'">B</div>
+    <div *ngSwitchCase="'C'">C</div>
+    <div *ngSwitchDefault="'None'">None</div>
+</div>
+

@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Store } from 'src/store';
+import { AuthDeactivateGuard } from './shared/guards/auth-deactivate.guard';
 
 @NgModule({
   declarations: [
