@@ -33,13 +33,13 @@ jkskjs
 <div ngbDropdown class="d-inline-block">
     <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-      <button ngbDropdownItem>Action - 1</button>
-      <button ngbDropdownItem>Another Action</button>
-      <button ngbDropdownItem>Something else is here</button>
+        <button ngbDropdownItem>Action - 1</button>
+        <button ngbDropdownItem>Another Action</button>
+        <button ngbDropdownItem>Something else is here</button>
     </div>
-  </div>
+</div>
 
-<app-my-form>
+<!-- <app-my-form>
     <h2 class="heading">User Info</h2>
     <app-check></app-check>
     <button type="submit" class="btn btn-primary">Submit User Info</button>
@@ -47,4 +47,8 @@ jkskjs
 <app-my-form>
     <h3 class="heading">Client Info</h3>
     <button type="submit" class="btn btn-secondary">Submit Client Info</button>
-</app-my-form>
+</app-my-form> -->
+
+<button (click)="showIt = !showIt">Toggle Show</button>
+<!-- <div @fade *ngIf="showIt">My Animation</div> -->
+<div @slide *ngIf="showIt">My Animation My Animation My Animation My Animation My Animation My Animation My Animation My Animation</div>
