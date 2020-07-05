@@ -12,7 +12,6 @@ export class AuthDeactivateGuard implements CanDeactivate<LoginComponent> {
     currentRoute: ActivatedRouteSnapshot,
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    debugger;
     if (component.form.invalid) {
       return component.showAlert();
     }

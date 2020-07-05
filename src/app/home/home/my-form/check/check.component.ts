@@ -18,7 +18,6 @@ export class CheckComponent implements OnInit {
   }
 
   _checked(){
-    debugger;
     this.checked.emit(this.isChecked);
   }
 
